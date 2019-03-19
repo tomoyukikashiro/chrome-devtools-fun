@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import SEO from "../components/seo"
 
@@ -81,15 +82,13 @@ function IndexPage(props) {
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={16} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
+                <Grid item xs={9}>
+                  <TextField
+                    id="standard-search"
+                    label="Search Chrome DevTools"
+                    type="search"
+                    fullWidth
+                  />
                 </Grid>
               </Grid>
             </div>
