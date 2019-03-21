@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import { graphql } from "gatsby"
 import Button from '@material-ui/core/Button';
@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
+import Modal from '@material-ui/core/Modal';
 import SEO from "../components/seo"
 
 const styles = theme => ({
@@ -46,6 +47,7 @@ const styles = theme => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    cursor: 'pointer'
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -57,12 +59,40 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing.unit * 6,
   },
+  modal: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  modalInner: {
+    width: '90%',
+    maxWidth: 1280
+  },
+  modalItem: {
+    position: 'relative',
+    paddingTop: '56.25%', // 16:9
+  },
+  modalItemInner: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left: 0,
+  }
 });
 
 function IndexPage(props) {
   const { classes } = props;
   const { data: { allVideo: { edges } } } = props;
   const versions = edges.map(i => i.node);
+
+  const [modalOpen, handleModal] = useState(false);
+  const [youtube, activateYoutubeId] = useState(false);
+  const handleModalOpen = (id, fn) => {
+    activateYoutubeId({id, fn});
+    handleModal(true);
+  }
+  const handleModalClose = () => handleModal(false);
 
   return (
     <React.Fragment>
@@ -105,7 +135,7 @@ function IndexPage(props) {
               <Grid container spacing={40} className={classes.gridContainer}>
                 {video.items.map((fn, k) => (
                   <Grid item key={k} sm={6} md={4} lg={3}>
-                    <Card className={classes.card}>
+                    <Card className={classes.card} onClick={() => handleModalOpen(video.youtube_id, fn)}>
                       <CardMedia
                         className={classes.cardMedia}
                         image={`https://img.youtube.com/vi/${video.youtube_id}/maxresdefault.jpg`} // eslint-disable-line max-len
@@ -129,6 +159,20 @@ function IndexPage(props) {
           ))}
         </div>
       </main>
+      <Modal open={modalOpen} onClose={handleModalClose} className={classes.modal}>
+       {youtube ?
+        <div className={classes.modalInner}>
+          <div className={classes.modalItem}>
+            <iframe className={classes.modalItemInner}
+              title={youtube.fn.function_name}
+              src={`https://www.youtube-nocookie.com/embed/${youtube.id}?showinfo=0&rel=0&start=${youtube.fn.start}&end=${youtube.fn.end}`}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen></iframe>
+          </div>
+        </div>
+        : null}
+      </Modal>
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
