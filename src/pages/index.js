@@ -61,8 +61,8 @@ const styles = theme => ({
 
 function IndexPage(props) {
   const { classes } = props;
-  const { data: { allVideo: { group } } } = props;
-  const versions = group.map(g => g.edges.map(e => e.node));
+  const { data: { allVideo: { edges } } } = props;
+  const versions = edges.map(i => i.node);
 
   return (
     <React.Fragment>
@@ -96,24 +96,24 @@ function IndexPage(props) {
         </div>
         {/* End hero unit */}
         <div className={classNames(classes.layout, classes.cardGrid)}>
-          {versions.map((videos, i) => (
+          {versions.map((video, i) => (
             <React.Fragment key={i}>
               <Typography variant="h6" gutterBottom>
-                Version {videos[0].version}
+                Version {video.version}
               </Typography>
               <Divider />
               <Grid container spacing={40} className={classes.gridContainer}>
-                {videos.map((video, k) => (
+                {video.items.map((fn, k) => (
                   <Grid item key={k} sm={6} md={4} lg={3}>
                     <Card className={classes.card}>
                       <CardMedia
                         className={classes.cardMedia}
                         image={`https://img.youtube.com/vi/${video.youtube_id}/maxresdefault.jpg`} // eslint-disable-line max-len
-                        title={video.function_name}
+                        title={fn.function_name}
                       />
                       <CardContent className={classes.cardContent}>
                         <Typography gutterBottom variant="subtitle1" component="h2">
-                          { video.function_name }
+                          { fn.function_name }
                         </Typography>
                       </CardContent>
                       <CardActions>
@@ -153,17 +153,16 @@ export const query = graphql`
       }
     }
     allVideo(
-      sort: {fields: [version, start], order: ASC}
+      sort: {fields: [version], order: ASC}
     ) {
-      group (field: version) {
-        edges {
-          node {
+      edges {
+        node {
+          version
+          youtube_id
+          items {
             function_name
-            version
-            youtube_id
             start
             end
-            tags
           }
         }
       }

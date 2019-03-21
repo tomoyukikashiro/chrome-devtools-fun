@@ -1,34 +1,32 @@
-[
-  {
-    "function_name": "Coverage Tab",
-    "youtube_id": "4mx1m7UbBR0",
-    "start": 10,
-    "end": 61,
-    "version": 59,
-    "tags": ["performance", "css", "javascript"]
-  },
-   {
-    "function_name": "Full Page Screenshots",
-    "youtube_id": "4mx1m7UbBR0",
-    "start": 62,
-    "end": 84,
-    "version": 59,
-    "tags": ["utility"]
-  },
-   {
-    "function_name": "Block Request URLs",
-    "youtube_id": "4mx1m7UbBR0",
-    "start": 85,
-    "end": 132,
-    "version": 59,
-    "tags": ["network"]
-  },
-   {
-    "function_name": "Unified Command Menu",
-    "youtube_id": "4mx1m7UbBR0",
-    "start": 133,
-    "end": 162,
-    "version": 59,
-    "tags": ["utility"]
-  }
-]
+{
+  "youtube_id": "4mx1m7UbBR0",
+  "version": 59,
+  "items": [
+    {
+      "function_name": "Coverage Tab",
+      "start": 10,
+      "end": 61,
+      "tags": ["performance", "css", "javascript"]
+    },
+    {
+      "function_name": "Full Page Screenshots",
+      "start": 62,
+      "end": 84,
+      "tags": ["utility"]
+    },
+    {
+      "function_name": "Block Request URLs",
+      "start": 85,
+      "end": 132,
+      "tags": ["network"]
+    },
+    {
+      "function_name": "Unified Command Menu",
+      "start": 133,
+      "end": 162,
+      "tags": ["utility"]
+    }
+  ]
+}
+
+

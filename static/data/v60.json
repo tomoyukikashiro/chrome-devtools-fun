@@ -1,66 +1,56 @@
-[
-  {
-    "function_name": "New Audits Panel",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 13,
-    "end": 48,
-    "version": 60,
-    "tags": ["audit"]
-  },
-  {
-    "function_name": "Third Party Badges",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 49,
-    "end": 95,
-    "version": 60,
-    "tags": ["network"]
-  },
-  {
-    "function_name": "\"Continue to Here\" GEsture",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 96,
-    "end": 123,
-    "version": 60,
-    "tags": ["javascript"]
-  },
-  {
-    "function_name": "More Informative Context Selection Menu",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 124,
-    "end": 136,
-    "version": 60,
-    "tags": ["console"]
-  },
-  {
-    "function_name": "More Helpful Object Previews",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 137,
-    "end": 149,
-    "version": 60,
-    "tags": ["console", "javascript"]
-  },
-  {
-    "function_name": "Real-Time Updates in Coverage Tab",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 150,
-    "end": 164,
-    "version": 60,
-    "tags": ["performance", "css", "javascript"]
-  },
-  {
-    "function_name": "Simpler Network Throtting Options",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 165,
-    "end": 182,
-    "version": 60,
-    "tags": ["network", "simulator"]
-  },
-  {
-    "function_name": "Async Stacks On by Default",
-    "youtube_id": "Qnmb2YhkQmQ",
-    "start": 183,
-    "end": 196,
-    "version": 60,
-    "tags": ["javascript"]
-  }
-]
+{
+  "youtube_id": "Qnmb2YhkQmQ",
+  "version": 60,
+  "items": [
+    {
+      "function_name": "New Audits Panel",
+      "start": 13,
+      "end": 48,
+      "tags": ["audit"]
+    },
+    {
+      "function_name": "Third Party Badges",
+      "start": 49,
+      "end": 95,
+      "tags": ["network"]
+    },
+    {
+      "function_name": "\"Continue to Here\" Gesture",
+      "start": 96,
+      "end": 123,
+      "tags": ["javascript"]
+    },
+    {
+      "function_name": "More Informative Context Selection Menu",
+      "start": 124,
+      "end": 136,
+      "tags": ["console"]
+    },
+    {
+      "function_name": "More Helpful Object Previews",
+      "start": 137,
+      "end": 149,
+      "tags": ["console", "javascript"]
+    },
+    {
+      "function_name": "Real-Time Updates in Coverage Tab",
+      "start": 150,
+      "end": 164,
+      "tags": ["performance", "css", "javascript"]
+    },
+    {
+      "function_name": "Simpler Network Throttling Options",
+      "start": 165,
+      "end": 182,
+      "tags": ["network", "simulator"]
+    },
+    {
+      "function_name": "Async Stacks On by Default",
+      "start": 183,
+      "end": 196,
+      "tags": ["javascript"]
+    }
+  ]
+}
+
+
