@@ -40,6 +40,9 @@ const styles = theme => ({
   gridContainer: {
     padding: `${theme.spacing.unit * 4}px 0 ${theme.spacing.unit * 16}px`,
   },
+  gridItem: {
+    width: '100%'
+  },
   cardGrid: {
     padding: `${theme.spacing.unit * 8}px 0`,
   },
@@ -134,7 +137,7 @@ function IndexPage(props) {
               <Divider />
               <Grid container spacing={40} className={classes.gridContainer}>
                 {video.items.map((fn, k) => (
-                  <Grid item key={k} sm={6} md={4} lg={3}>
+                  <Grid item key={k} sm={6} md={4} lg={3} className={classes.gridItem}>
                     <Card className={classes.card} onClick={() => handleModalOpen(video.youtube_id, fn)}>
                       <CardMedia
                         className={classes.cardMedia}
@@ -165,7 +168,7 @@ function IndexPage(props) {
           <div className={classes.modalItem}>
             <iframe className={classes.modalItemInner}
               title={youtube.fn.function_name}
-              src={`https://www.youtube-nocookie.com/embed/${youtube.id}?showinfo=0&rel=0&start=${youtube.fn.start}&end=${youtube.fn.end}`}
+              src={`https://www.youtube-nocookie.com/embed/${youtube.id}?autoplay=1&showinfo=0&rel=0&start=${youtube.fn.start}&end=${youtube.fn.end}`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen></iframe>
