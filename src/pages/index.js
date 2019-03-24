@@ -14,6 +14,7 @@ import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import SEO from "../components/seo"
+import Layout from '../components/Layout'
 
 const styles = theme => ({
   heroUnit: {
@@ -22,7 +23,7 @@ const styles = theme => ({
   heroContent: {
     maxWidth: 600,
     margin: '0 auto',
-    padding: `${theme.spacing.unit * 8}px 0 ${theme.spacing.unit * 6}px`,
+    padding: `${theme.spacing.unit * 8}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 6}px`,
   },
   heroButtons: {
     marginTop: theme.spacing.unit * 4,
@@ -101,7 +102,7 @@ function IndexPage(props) {
     <React.Fragment>
       <SEO title="Home" />
       <CssBaseline />
-      <main>
+      <Layout>
         {/* Hero unit */}
         <div className={classes.heroUnit}>
           <div className={classes.heroContent}>
@@ -161,7 +162,7 @@ function IndexPage(props) {
             </React.Fragment>
           ))}
         </div>
-      </main>
+      </Layout>
       <Modal open={modalOpen} onClose={handleModalClose} className={classes.modal}>
        {youtube ?
         <div className={classes.modalInner}>
