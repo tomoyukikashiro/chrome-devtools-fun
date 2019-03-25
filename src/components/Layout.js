@@ -13,6 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import LabelIcon from '@material-ui/icons/Label';
+import HistoryIcon from '@material-ui/icons/History';
 import MenuIcon from '@material-ui/icons/Menu';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -64,6 +65,7 @@ class Layout extends React.Component {
   state = {
     mobileOpen: false,
     versionOpen: false,
+    tagOpen: false,
   };
 
   handleDrawerToggle = () => {
@@ -71,6 +73,9 @@ class Layout extends React.Component {
   };
   handleVersionToggle = () => {
     this.setState(state => ({ versionOpen: !state.versionOpen }));
+  };
+  handleTagToggle = () => {
+    this.setState(state => ({ tagOpen: !state.tagOpen }));
   };
 
   render() {
@@ -86,6 +91,9 @@ class Layout extends React.Component {
             edges {
               node {
                 version
+                items {
+                  tags
+                }
               }
             }
           }
@@ -93,13 +101,15 @@ class Layout extends React.Component {
       `}
       render={({ allVideo: { edges }}) => {
         const versions = edges.map(e => e.node.version)
+        let tags = Array.from(new Set(edges.flatMap(e => e.node.items.flatMap(i => i.tags)))).sort()
+
         return (
           <>
             <div className={classes.toolbar}/>
             <Divider/>
             <List>
               <ListItem button onClick={this.handleVersionToggle}>
-                <ListItemIcon><LabelIcon/></ListItemIcon>
+                <ListItemIcon><HistoryIcon/></ListItemIcon>
                 <ListItemText inset primary="Versions"/>
                 {this.state.versionOpen ? <ExpandLess/> : <ExpandMore/>}
               </ListItem>
@@ -108,6 +118,23 @@ class Layout extends React.Component {
                   { versions.map(v => (
                     <ListItem button key={v} className={classes.listNested}>
                       <ListItemText inset primary={`Ver. ${v}`}/>
+                    </ListItem>
+                  ))}
+                </List>
+              </Collapse>
+            </List>
+            <Divider/>
+            <List>
+              <ListItem button onClick={this.handleTagToggle}>
+                <ListItemIcon><LabelIcon/></ListItemIcon>
+                <ListItemText inset primary="Tags"/>
+                {this.state.tagOpen ? <ExpandLess/> : <ExpandMore/>}
+              </ListItem>
+              <Collapse in={this.state.tagOpen} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  { tags.map(t => (
+                    <ListItem button key={t} className={classes.listNested}>
+                      <ListItemText inset primary={t}/>
                     </ListItem>
                   ))}
                 </List>
