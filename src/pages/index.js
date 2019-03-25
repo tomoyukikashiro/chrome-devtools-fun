@@ -11,6 +11,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { withStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import SEO from "../components/seo"
@@ -61,15 +62,23 @@ const styles = theme => ({
   modal: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   modalInner: {
     width: '90%',
-    maxWidth: 1280
+    maxWidth: 1280,
   },
   modalItem: {
     position: 'relative',
     paddingTop: '56.25%', // 16:9
+    backgroundColor: '#fff'
+  },
+  modalLoading: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    marginTop: '-20px',
+    marginLeft: '-20px',
   },
   modalItemInner: {
     position: 'absolute',
@@ -162,6 +171,7 @@ function IndexPage(props) {
        {youtube ?
         <div className={classes.modalInner}>
           <div className={classes.modalItem}>
+            <CircularProgress className={classes.modalLoading} />
             <iframe className={classes.modalItemInner}
               title={youtube.fn.function_name}
               src={`https://www.youtube-nocookie.com/embed/${youtube.id}?autoplay=1&showinfo=0&rel=0&start=${youtube.fn.start}&end=${youtube.fn.end}`}
