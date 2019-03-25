@@ -145,7 +145,7 @@ class Layout extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" color="inherit" noWrap>
-              Chrome Devtools Fun
+              Chrome DevTools Fun
             </Typography>
           </Toolbar>
         </AppBar>
