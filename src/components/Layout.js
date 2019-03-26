@@ -59,6 +59,10 @@ const styles = theme => ({
   listNested: {
     paddingLeft: theme.spacing.unit * 4,
   },
+  footer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing.unit * 6,
+  },
 });
 
 class Layout extends React.Component {
@@ -207,6 +211,14 @@ class Layout extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
           { children }
+          <footer className={classes.footer}>
+            <Typography variant="h6" align="center" gutterBottom>
+              Footer
+            </Typography>
+            <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+              Something here to give the footer a purpose!
+            </Typography>
+          </footer>
         </main>
       </div>
     );
