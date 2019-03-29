@@ -76,7 +76,7 @@ export const query = graphql`
           version
           youtube_id
           items {
-            function_name
+            update_name
             start
             end
           }

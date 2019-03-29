@@ -3,49 +3,49 @@
   "version": 60,
   "items": [
     {
-      "function_name": "New Audits Panel",
+      "update_name": "New Audits Panel",
       "start": 13,
       "end": 48,
       "tags": ["audit"]
     },
     {
-      "function_name": "Third Party Badges",
+      "update_name": "Third Party Badges",
       "start": 49,
       "end": 95,
       "tags": ["network"]
     },
     {
-      "function_name": "\"Continue to Here\" Gesture",
+      "update_name": "\"Continue to Here\" Gesture",
       "start": 96,
       "end": 123,
       "tags": ["javascript"]
     },
     {
-      "function_name": "More Informative Context Selection Menu",
+      "update_name": "More Informative Context Selection Menu",
       "start": 124,
       "end": 136,
       "tags": ["console"]
     },
     {
-      "function_name": "More Helpful Object Previews",
+      "update_name": "More Helpful Object Previews",
       "start": 137,
       "end": 149,
       "tags": ["console", "javascript"]
     },
     {
-      "function_name": "Real-Time Updates in Coverage Tab",
+      "update_name": "Real-Time Updates in Coverage Tab",
       "start": 150,
       "end": 164,
       "tags": ["performance", "css", "javascript"]
     },
     {
-      "function_name": "Simpler Network Throttling Options",
+      "update_name": "Simpler Network Throttling Options",
       "start": 165,
       "end": 182,
       "tags": ["network", "simulator"]
     },
     {
-      "function_name": "Async Stacks On by Default",
+      "update_name": "Async Stacks On by Default",
       "start": 183,
       "end": 196,
       "tags": ["javascript"]

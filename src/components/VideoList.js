@@ -40,11 +40,11 @@ const VideoList = ({ classes, video, handleModalOpen }) => (
           <CardMedia
             className={classes.cardMedia}
             image={`https://img.youtube.com/vi/${video.youtube_id}/maxresdefault.jpg`} // eslint-disable-line max-len
-            title={fn.function_name}
+            title={fn.update_name}
           />
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="subtitle1" component="h2">
-              {fn.function_name}
+              {fn.update_name}
             </Typography>
           </CardContent>
           <CardActions>

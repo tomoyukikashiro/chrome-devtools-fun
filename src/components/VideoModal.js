@@ -41,7 +41,7 @@ const VideoModal = ({ classes, youtube, modalOpen, handleModalClose }) => (
           <div className={classes.modalItem}>
             <CircularProgress className={classes.modalLoading} />
               <iframe className={classes.modalItemInner}
-                title={youtube.fn.function_name}
+                title={youtube.fn.update_name}
                 src={`https://www.youtube-nocookie.com/embed/${youtube.id}?autoplay=1&showinfo=0&rel=0&start=${youtube.fn.start}&end=${youtube.fn.end}`}
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

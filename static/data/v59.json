@@ -3,25 +3,25 @@
   "version": 59,
   "items": [
     {
-      "function_name": "Coverage Tab",
+      "update_name": "Coverage Tab",
       "start": 10,
       "end": 61,
       "tags": ["performance", "css", "javascript"]
     },
     {
-      "function_name": "Full Page Screenshots",
+      "update_name": "Full Page Screenshots",
       "start": 62,
       "end": 84,
       "tags": ["utility"]
     },
     {
-      "function_name": "Block Request URLs",
+      "update_name": "Block Request URLs",
       "start": 85,
       "end": 132,
       "tags": ["network"]
     },
     {
-      "function_name": "Unified Command Menu",
+      "update_name": "Unified Command Menu",
       "start": 133,
       "end": 162,
       "tags": ["utility"]
