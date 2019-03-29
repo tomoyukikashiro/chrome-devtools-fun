@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "chrome-devtools-fun",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "You can search Chrome DevTools updates and functions.",
+  "version": "1.0.0",
+  "author": "Tomoyuki Kashiro <ksrtmyk@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
     "@material-ui/icons": "^3.0.2",
@@ -39,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tomoyukiashiro/chrome-devtools-fun"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/tomoyukikashiro/chrome-devtools-fun/issues"
   }
 }
