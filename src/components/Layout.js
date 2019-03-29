@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
@@ -20,6 +20,7 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import flatMap from 'lodash/flatMap';
 
 const drawerWidth = 240;
 
@@ -48,6 +49,10 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
+  },
+  listLink: {
+    display: 'block',
+    textDecoration: 'none',
   },
   listItem: {
     paddingRight: 0,
@@ -105,7 +110,7 @@ class Layout extends React.Component {
       `}
       render={({ allVideo: { edges }}) => {
         const versions = edges.map(e => e.node.version)
-        let tags = Array.from(new Set(edges.flatMap(e => e.node.items.flatMap(i => i.tags)))).sort()
+        let tags = Array.from(new Set(flatMap(edges, e => flatMap(e.node.items, i => i.tags)))).sort()
 
         return (
           <>
@@ -120,9 +125,11 @@ class Layout extends React.Component {
               <Collapse in={this.state.versionOpen} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   { versions.map(v => (
-                    <ListItem button key={v} className={classes.listNested}>
-                      <ListItemText inset primary={`Ver. ${v}`}/>
-                    </ListItem>
+                    <Link className={classes.listLink} to={`/versions/${v}/`} key={v}>
+                      <ListItem button className={classes.listNested}>
+                        <ListItemText inset primary={`Ver. ${v}`} />
+                      </ListItem>
+                    </Link>
                   ))}
                 </List>
               </Collapse>
@@ -137,9 +144,11 @@ class Layout extends React.Component {
               <Collapse in={this.state.tagOpen} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   { tags.map(t => (
-                    <ListItem button key={t} className={classes.listNested}>
-                      <ListItemText inset primary={t}/>
-                    </ListItem>
+                    <Link className={classes.listLink} to={`/tags/${t}/`} key={t}>
+                      <ListItem button className={classes.listNested}>
+                        <ListItemText inset primary={t}/>
+                      </ListItem>
+                    </Link>
                   ))}
                 </List>
               </Collapse>

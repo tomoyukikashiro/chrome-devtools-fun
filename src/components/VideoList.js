@@ -32,19 +32,19 @@ const styles = theme => ({
   },
 })
 
-const VideoList = ({ classes, video, handleModalOpen }) => (
+const VideoList = ({ classes, videos, handleModalOpen }) => (
   <Grid container spacing={40} className={classes.gridContainer}>
-    {video.items.map((fn, k) => (
+    {videos.map((v, k) => (
       <Grid item key={k} sm={6} md={4} lg={3} className={classes.gridItem}>
-        <Card className={classes.card} onClick={() => handleModalOpen(video.youtube_id, fn)}>
+        <Card className={classes.card} onClick={() => handleModalOpen(v.youtubeId, v)}>
           <CardMedia
             className={classes.cardMedia}
-            image={`https://img.youtube.com/vi/${video.youtube_id}/maxresdefault.jpg`} // eslint-disable-line max-len
-            title={fn.update_name}
+            image={`https://img.youtube.com/vi/${v.youtubeId}/maxresdefault.jpg`} // eslint-disable-line max-len
+            title={v.update_name}
           />
           <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="subtitle1" component="h2">
-              {fn.update_name}
+              {v.update_name}
             </Typography>
           </CardContent>
           <CardActions>

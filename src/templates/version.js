@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import classNames from 'classnames';
 import { graphql } from "gatsby"
 import Divider from '@material-ui/core/Divider';
@@ -20,12 +20,9 @@ const styles = theme => ({
   },
 });
 
-function IndexPage(props) {
-  const { classes } = props;
-  const { data: { allVideo: { edges } } } = props;
-  const versions = edges.map(i => i.node);
-  const heroDescription = 'Search Chrome DevTools Updates !!'
-
+const VersionPage = ({ classes, data: { allVideo: { edges } } }) => {
+  const video = edges[0].node
+  const title = `Chrome DevTools Version ${video.version} updates`
   const [modalOpen, handleModal] = useState(false);
   const [youtube, activateYoutube] = useState(false);
   const handleModalOpen = (id, fn) => {
@@ -37,45 +34,34 @@ function IndexPage(props) {
 
   return (
     <React.Fragment>
-      <SEO title="Home" />
+      <SEO title={title} />
       <CssBaseline />
       <Layout>
         {/* Hero unit */}
-        <Hero title="Chrome DevTools Fun" description={heroDescription} />
+        <Hero title={title} />
         {/* End hero unit */}
         <div className={classNames(classes.layout, classes.cardGrid)}>
-          {versions.map((video, i) => (
-            <React.Fragment key={i}>
-              <Typography variant="h6" gutterBottom>
-                Version {video.version}
-              </Typography>
-              <Divider />
-              <VideoList videos={mergeId(video.items, video.youtube_id)} handleModalOpen={handleModalOpen} />
-            </React.Fragment>
-          ))}
+          <Typography variant="h6" gutterBottom>
+            Version {video.version}
+          </Typography>
+          <Divider />
+          <VideoList videos={mergeId(video.items, video.youtube_id)} handleModalOpen={handleModalOpen} />
         </div>
       </Layout>
       <VideoModal youtube={youtube} modalOpen={modalOpen} handleModalClose={handleModalClose} />
     </React.Fragment>
-  );
+  )
 }
 
-export default withStyles(styles)(IndexPage);
+export default withStyles(styles)(VersionPage)
 
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allVideo(
-      sort: {fields: [version], order: ASC}
-    ) {
+export const pageQuery = graphql`  
+  query videos($version: Int) {
+    allVideo(filter: {version: {eq: $version}}, limit: 1) {
       edges {
         node {
-          version
           youtube_id
+          version
           items {
             update_name
             start
