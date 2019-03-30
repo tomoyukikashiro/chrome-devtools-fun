@@ -1,27 +1,27 @@
 {
   "youtube_id": "4mx1m7UbBR0",
   "version": 59,
-  "items": [
+  "chapters": [
     {
-      "update_name": "Coverage Tab",
+      "name": "Coverage Tab",
       "start": 10,
       "end": 61,
       "tags": ["performance", "css", "javascript"]
     },
     {
-      "update_name": "Full Page Screenshots",
+      "name": "Full Page Screenshots",
       "start": 62,
       "end": 84,
       "tags": ["utility"]
     },
     {
-      "update_name": "Block Request URLs",
+      "name": "Block Request URLs",
       "start": 85,
       "end": 132,
       "tags": ["network"]
     },
     {
-      "update_name": "Unified Command Menu",
+      "name": "Unified Command Menu",
       "start": 133,
       "end": 162,
       "tags": ["utility"]

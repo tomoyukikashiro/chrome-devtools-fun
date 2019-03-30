@@ -25,8 +25,8 @@ const VersionPage = ({ classes, data: { allVideo: { edges } } }) => {
   const title = `Chrome DevTools Version ${video.version} updates`
   const [modalOpen, handleModal] = useState(false);
   const [youtube, activateYoutube] = useState(false);
-  const handleModalOpen = (id, fn) => {
-    activateYoutube({id, fn});
+  const handleModalOpen = (id, chapter) => {
+    activateYoutube({id, chapter});
     handleModal(true);
   }
   const handleModalClose = () => handleModal(false);
@@ -45,7 +45,7 @@ const VersionPage = ({ classes, data: { allVideo: { edges } } }) => {
             Version {video.version}
           </Typography>
           <Divider />
-          <VideoList videos={mergeId(video.items, video.youtube_id)} handleModalOpen={handleModalOpen} />
+          <VideoList videos={mergeId(video.chapters, video.youtube_id)} handleModalOpen={handleModalOpen} />
         </div>
       </Layout>
       <VideoModal youtube={youtube} modalOpen={modalOpen} handleModalClose={handleModalClose} />
@@ -62,8 +62,8 @@ export const pageQuery = graphql`
         node {
           youtube_id
           version
-          items {
-            update_name
+          chapters {
+            name
             start
             end
           }

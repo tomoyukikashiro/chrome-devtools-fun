@@ -23,8 +23,8 @@ const VersionPage = ({ classes, pageContext: { videos, tag } }) => {
   const title = `Chrome DevTools '${tag}' updates`
   const [modalOpen, handleModal] = useState(false);
   const [youtube, activateYoutube] = useState(false);
-  const handleModalOpen = (id, fn) => {
-    activateYoutube({id, fn});
+  const handleModalOpen = (id, chapter) => {
+    activateYoutube({id, chapter});
     handleModal(true);
   }
   const handleModalClose = () => handleModal(false);

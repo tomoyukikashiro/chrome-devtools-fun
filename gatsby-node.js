@@ -20,8 +20,8 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             version
             youtube_id
-            items {
-              update_name
+            chapters {
+              name
               start
               end
               tags
@@ -40,10 +40,10 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     })
   })
-  let tags = Array.from(new Set(flatMap(versions.data.allVideo.edges, e => flatMap(e.node.items, i => i.tags)))).sort()
+  let tags = Array.from(new Set(flatMap(versions.data.allVideo.edges, e => flatMap(e.node.chapters, i => i.tags)))).sort()
   const mergeId = (videos, youtubeId) => videos.map(v => ({ ...v, youtubeId }))
   tags.forEach(tag => {
-    const videos = flatMap(versions.data.allVideo.edges, ({ node }) => mergeId(node.items, node.youtube_id))
+    const videos = flatMap(versions.data.allVideo.edges, ({ node }) => mergeId(node.chapters, node.youtube_id))
     const taggedVideos = videos.filter(video => video.tags.includes(tag))
 
     createPage({

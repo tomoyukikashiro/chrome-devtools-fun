@@ -108,7 +108,7 @@ class Layout extends React.Component {
             edges {
               node {
                 version
-                items {
+                chapters {
                   tags
                 }
               }
@@ -119,7 +119,7 @@ class Layout extends React.Component {
       render={({ site: { siteMetadata }, allVideo: { edges }}) => {
         const { account } = siteMetadata
         const versions = edges.map(e => e.node.version)
-        let tags = Array.from(new Set(flatMap(edges, e => flatMap(e.node.items, i => i.tags)))).sort()
+        let tags = Array.from(new Set(flatMap(edges, e => flatMap(e.node.chapters, i => i.tags)))).sort()
 
         return (
           <>
