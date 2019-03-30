@@ -17,6 +17,8 @@ import HistoryIcon from '@material-ui/icons/History';
 import MenuIcon from '@material-ui/icons/Menu';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import CodeIcon from '@material-ui/icons/Code';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -94,6 +96,12 @@ class Layout extends React.Component {
       <StaticQuery
       query={graphql`
         query {
+          site {
+            siteMetadata {
+              account
+              author
+            }
+          }
           allVideo(
             sort: {fields: [version], order: ASC}
           ) {
@@ -108,7 +116,8 @@ class Layout extends React.Component {
           }
         }
       `}
-      render={({ allVideo: { edges }}) => {
+      render={({ site: { siteMetadata }, allVideo: { edges }}) => {
+        const { account } = siteMetadata
         const versions = edges.map(e => e.node.version)
         let tags = Array.from(new Set(flatMap(edges, e => flatMap(e.node.items, i => i.tags)))).sort()
 
@@ -164,6 +173,17 @@ class Layout extends React.Component {
                         href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIC74v_mCLUXbjj7Ng7oTAPE">
                 <ListItemIcon><VideoLibraryIcon/></ListItemIcon>
                 <ListItemText className={classes.iconText} primary="DevTools 101"/>
+              </ListItem>
+              <Divider/>
+              <ListItem className={classes.listItem} button component="a"
+                        href={`https://twitter.com/${account}/`}>
+                <ListItemIcon><AccountCircleIcon/></ListItemIcon>
+                <ListItemText className={classes.iconText} primary="Developed by" />
+              </ListItem>
+              <ListItem className={classes.listItem} button component="a"
+                        href={`https://github.com/tomoyukikashiro/chrome-devtools-fun`}>
+                <ListItemIcon><CodeIcon/></ListItemIcon>
+                <ListItemText className={classes.iconText} primary="Repository" />
               </ListItem>
             </List>
           </>
@@ -221,11 +241,8 @@ class Layout extends React.Component {
           <div className={classes.toolbar} />
           { children }
           <footer className={classes.footer}>
-            <Typography variant="h6" align="center" gutterBottom>
-              Footer
-            </Typography>
             <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-              Something here to give the footer a purpose!
+              Made with <span role="img" aria-label="love">❤️</span> to Chrome DevTools
             </Typography>
           </footer>
         </main>

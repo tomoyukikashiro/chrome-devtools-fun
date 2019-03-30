@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Chrome DevTools Fun 🎉`,
     description: `You can search Chrome DevTools updates and functions.`,
-    author: `@tomoyukikashiro`,
+    account: `tomoyukikashiro`,
+    author: `Tomoyuki Kashiro`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
