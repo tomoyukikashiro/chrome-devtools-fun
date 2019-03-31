@@ -13,10 +13,11 @@ import VideoModal from '../components/VideoModal'
 
 const styles = theme => ({
   layout: {
-    width: 'auto',
+    maxWidth: 1440,
+    margin: `0 auto`,
     paddingTop: theme.spacing.unit * 8,
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3,
   },
 });
 
