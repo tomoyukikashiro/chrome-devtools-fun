@@ -1,6 +1,5 @@
 {
   "name": "chrome-devtools-fun",
-  "private": true,
   "description": "You can search Chrome DevTools updates and functions.",
   "version": "1.0.0",
   "author": "Tomoyuki Kashiro <ksrtmyk@gmail.com>",
@@ -27,7 +26,9 @@
     "prettier": "^1.16.4"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "chrome",
+    "devtool"
   ],
   "license": "MIT",
   "scripts": {
