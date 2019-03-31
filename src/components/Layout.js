@@ -30,6 +30,10 @@ const styles = theme => ({
   root: {
     display: 'flex',
   },
+  homeLink: {
+    color: '#fff',
+    textDecoration: 'none'
+  },
   drawer: {
     [theme.breakpoints.up('sm')]: {
       width: drawerWidth,
@@ -204,9 +208,11 @@ class Layout extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              Chrome DevTools Fun
-            </Typography>
+            <Link className={classes.homeLink} to='/'>
+              <Typography variant="h6" color="inherit" noWrap>
+                Chrome DevTools Fun
+              </Typography>
+            </Link>
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer}>

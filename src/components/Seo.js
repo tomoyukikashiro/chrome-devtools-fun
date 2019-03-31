@@ -9,15 +9,21 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import ogp from '../images/ogp.png'
+import favicon16 from '../images/icons/favicon-16x16.png'
+import favicon32 from '../images/icons/favicon-32x32.png'
+import appleIcon from '../images/icons/apple-touch-icon.png'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function Seo({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            url
             title
             description
+            account
             author
           }
         }
@@ -34,6 +40,25 @@ function SEO({ description, lang, meta, keywords, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          rel: `apple-touch-icon`,
+          sizes: `180x180`,
+          href: appleIcon
+        },
+        {
+          rel: `icon`,
+          type: `image/png`,
+          sizes: `32x32`,
+          href: favicon32
+        },
+        {
+          rel: `icon`,
+          type: `image/png`,
+          sizes: `16x16`,
+          href: favicon16
+        },
+      ]}
       meta={[
         {
           name: `description`,
@@ -52,12 +77,16 @@ function SEO({ description, lang, meta, keywords, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `${site.siteMetadata.url}${ogp}`,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `@${site.siteMetadata.account}`,
         },
         {
           name: `twitter:title`,
@@ -67,27 +96,22 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
-        )
-        .concat(meta)}
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.url}${ogp}`,
+        }
+      ].concat(meta)}
     />
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
@@ -95,4 +119,4 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default Seo
