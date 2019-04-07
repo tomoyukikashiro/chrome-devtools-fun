@@ -5,7 +5,7 @@ import Divider from "@material-ui/core/Divider"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import Typography from "@material-ui/core/Typography"
 import { withStyles } from "@material-ui/core/styles"
-import Seo from "../components/seo"
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import VideoList from "../components/VideoList"
@@ -87,7 +87,7 @@ export const query = graphql`
         title
       }
     }
-    allVideo(sort: { fields: [version], order: DESC }) {
+    allVideo(sort: { fields: [version], order: DESC }, limit: 5) {
       edges {
         node {
           version

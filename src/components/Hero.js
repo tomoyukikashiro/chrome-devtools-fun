@@ -1,10 +1,10 @@
 import React from "react"
 import Typography from "@material-ui/core/Typography"
 import algoliasearch from "algoliasearch/lite"
-import { InstantSearch, connectAutoComplete } from "react-instantsearch-dom"
+import { InstantSearch } from "react-instantsearch-dom"
 import Grid from "@material-ui/core/Grid"
 import { withStyles } from "@material-ui/core"
-import SearchField from "../components/SearchField"
+import AutoComplete from "../components/AutoComplete"
 
 const styles = theme => ({
   heroUnit: {
@@ -36,9 +36,6 @@ const Hero = ({
     process.env.GATSBY_ALGOLIA_APPLICATION_ID,
     process.env.GATSBY_ALGOLIA_SEARCH_API_KEY
   )
-  const AlgoliaSearchField = connectAutoComplete(({ hits }) => (
-    <SearchField hits={hits} handleModalOpen={handleModalOpen} />
-  ))
   return (
     <div className={classes.heroUnit}>
       <div className={classes.heroContent}>
@@ -65,13 +62,13 @@ const Hero = ({
         )}
         {showSearch && (
           <div className={classes.heroSearch}>
-            <Grid container spacing={16} justify="center">
-              <Grid item xs={9}>
+            <Grid container justify="center">
+              <Grid item xs={12} md={9}>
                 <InstantSearch
                   indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}
                   searchClient={searchClient}
                 >
-                  <AlgoliaSearchField />
+                  <AutoComplete onSuggestionSelected={handleModalOpen} />
                 </InstantSearch>
               </Grid>
             </Grid>
