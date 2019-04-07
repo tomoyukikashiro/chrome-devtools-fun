@@ -10,6 +10,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import VideoList from "../components/VideoList"
 import VideoModal from "../components/VideoModal"
+import withRoot from "../withRoot"
 
 const styles = theme => ({
   layout: {
@@ -66,7 +67,7 @@ const VersionPage = ({
   )
 }
 
-export default withStyles(styles)(VersionPage)
+export default withRoot(withStyles(styles)(VersionPage))
 
 export const pageQuery = graphql`
   query videos($version: Int) {
