@@ -1,0 +1,30 @@
+{
+  "youtube_id": "90wNAn05Cf4",
+  "version": 64,
+  "chapters": [
+    {
+      "name": "Performance Monitor",
+      "start": 15,
+      "end": 68,
+      "tags": ["performance"]
+    },
+    {
+      "name": "Console Sidebar",
+      "start": 68,
+      "end": 132,
+      "tags": ["console"]
+    },
+    {
+      "name": "Console Message Grouping",
+      "start": 132,
+      "end": 158,
+      "tags": ["console"]
+    },
+    {
+      "name": "Bonus Tip! (Hover Effects)",
+      "start": 158,
+      "end": 202,
+      "tags": ["css"]
+    }
+  ]
+}

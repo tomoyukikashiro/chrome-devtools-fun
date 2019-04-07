@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   versions.data.allVideo.edges.forEach(({ node }) => {
     createPage({
-      path: `versions/${node.version}`,
+      path: `versions/v${node.version}`,
       component: VersionPage,
       context: {
         version: node.version

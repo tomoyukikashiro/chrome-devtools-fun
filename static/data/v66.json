@@ -1,0 +1,42 @@
+{
+  "youtube_id": "eaYXFTJVewA",
+  "version": 66,
+  "chapters": [
+    {
+      "name": "Blackboxing in the Network panel",
+      "start": 22,
+      "end": 70,
+      "tags": ["network"]
+    },
+    {
+      "name": "HTML rendering in the Preview tab",
+      "start": 70,
+      "end": 97,
+      "tags": ["network"]
+    },
+    {
+      "name": "Pretty-printing in the Preview and Response tabs",
+      "start": 97,
+      "end": 111,
+      "tags": ["network"]
+    },
+    {
+      "name": "Auto-adjust zooming in Device Mode",
+      "start": 111,
+      "end": 143,
+      "tags": ["device"]
+    },
+    {
+      "name": "An improvement to Local Overrides",
+      "start": 143,
+      "end": 170,
+      "tags": ["css"]
+    },
+    {
+      "name": "Bonus Tip! Blackboxing framework scripts to make Event Listener Breakpoints more useful",
+      "start": 170,
+      "end": 238,
+      "tags": ["javascript"]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "youtube_id": "4EdPq9Nw6uI",
+  "version": 67,
+  "chapters": [
+    {
+      "name": "Search Across Network Headers",
+      "start": 11,
+      "end": 33,
+      "tags": ["network"]
+    },
+    {
+      "name": "Copy As Fetch",
+      "start": 33,
+      "end": 41,
+      "tags": ["network"]
+    },    {
+      "name": "Stop Infinite Loops",
+      "start": 41,
+      "end": 65,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "CSS Variable Previews",
+      "start": 65,
+      "end": 95,
+      "tags": ["css"]
+    },
+    {
+      "name": "Audits Panel Updates",
+      "start": 95,
+      "end": 123,
+      "tags": ["audits"]
+    },    {
+      "name": "Performance Panel Updates",
+      "start": 123,
+      "end": 153,
+      "tags": ["performance"]
+    },
+    {
+      "name": "Certificate Transparency ",
+      "start": 153,
+      "end": 158,
+      "tags": ["security"]
+    },    {
+      "name": "UI Updates",
+      "start": 158,
+      "end": 185,
+      "tags": ["memory"]
+    },
+    {
+      "name": "Bonus Tip! Animations Inspector + Layers Panel",
+      "start": 185,
+      "end": 223,
+      "tags": ["animation"]
+    }
+  ]
+}

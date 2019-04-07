@@ -1,0 +1,36 @@
+{
+  "youtube_id": "fJxFZO8OEEs",
+  "version": 71,
+  "chapters": [
+    {
+      "name": "Hover over Live Expression to highlight DOM node",
+      "start": 10,
+      "end": 46,
+      "tags": ["console", "javascript"]
+    },
+    {
+      "name": "Store DOM nodes as global variables",
+      "start": 46,
+      "end": 69,
+      "tags": ["console", "javascript"]
+    },
+    {
+      "name": "Initiator and priority info in HAR file",
+      "start": 69,
+      "end": 133,
+      "tags": ["network"]
+    },
+    {
+      "name": "Access Command Menu from Main Menu",
+      "start": 133,
+      "end": 152,
+      "tags": ["utility"]
+    },
+    {
+      "name": "Bonus Tip: monitor event",
+      "start": 152,
+      "end": 262,
+      "tags": ["javascript", "console"]
+    }
+  ]
+}

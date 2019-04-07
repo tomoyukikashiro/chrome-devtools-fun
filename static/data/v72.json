@@ -1,0 +1,36 @@
+{
+  "youtube_id": "XVJxlEdB230",
+  "version": 72,
+  "chapters": [
+    {
+      "name": "Performance metrics in the Timings section",
+      "start": 8,
+      "end": 73,
+      "tags": ["performance"]
+    },
+    {
+      "name": "Highlight text nodes",
+      "start": 73,
+      "end": 89,
+      "tags": ["elements"]
+    },
+    {
+      "name": " Copy JS path",
+      "start": 89,
+      "end": 134,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "New audit: Detect Javascript Library",
+      "start": 134,
+      "end": 154,
+      "tags": ["audits"]
+    },
+    {
+      "name": "Bonus tip! Inspect media queries with Device Mode",
+      "start": 154,
+      "end": 208,
+      "tags": ["device", "css"]
+    }
+  ]
+}

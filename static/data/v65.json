@@ -1,0 +1,48 @@
+{
+  "youtube_id": "D1pV7ermy6w",
+  "version": 65,
+  "chapters": [
+    {
+      "name": "Local Overrides",
+      "start": 26,
+      "end": 146,
+      "tags": ["css"]
+    },
+    {
+      "name": "New accessibility tools: Contrast ratio",
+      "start": 146,
+      "end": 156,
+      "tags": ["accessibility"]
+    },
+    {
+      "name": "New accessibility tools: accessibility panel",
+      "start": 156,
+      "end": 176,
+      "tags": ["accessibility"]
+    },
+    {
+      "name": "New SEO and performance audits",
+      "start": 176,
+      "end": 221,
+      "tags": ["seo", "audits"]
+    },
+    {
+      "name": "Reliable worker and async code stepping",
+      "start": 221,
+      "end": 308,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "Multiple recordings in the Performance panel",
+      "start": 308,
+      "end": 342,
+      "tags": ["performance"]
+    },
+    {
+      "name": "Bonus tip! Automating DevTools actions with Puppeteer",
+      "start": 342,
+      "end": 375,
+      "tags": ["screenshot"]
+    }
+  ]
+}

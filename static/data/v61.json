@@ -1,0 +1,44 @@
+{
+  "youtube_id": "Lscb4SL58X4",
+  "version": 61,
+  "chapters": [
+    {
+      "name": "Mobile Device Throttling",
+      "start": 0,
+      "end": 63,
+      "tags": ["network", "device"]
+    },
+    {
+      "name": "Usage Chart",
+      "start": 63,
+      "end": 70,
+      "tags": ["application"]
+    },
+    {
+      "name": "Time Cached Column",
+      "start": 70,
+      "end": 76,
+      "tags": ["cache"]
+    },
+    {
+      "name": "FPS Meter from Command Menu",
+      "start": 76,
+      "end": 99,
+      "tags": ["performance", "utility"]
+    },
+    {
+      "name": "Flamechart Mouse Wheel Action",
+      "start": 99,
+      "end": 126,
+      "tags": ["performance"]
+    },
+    {
+      "name": "Debugging Support for ES6 Modules",
+      "start": 126,
+      "end": 150,
+      "tags": ["javascript"]
+    }
+  ]
+}
+
+

@@ -1,0 +1,60 @@
+{
+  "youtube_id": "uddZX9ZK6wY",
+  "version": 73,
+  "chapters": [
+    {
+      "name": "Logpoints",
+      "start": 12,
+      "end": 82,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Detailed tooltips when inspecting nodes",
+      "start": 82,
+      "end": 112,
+      "tags": ["css", "elements"]
+    },
+    {
+      "name": "Export code coverage data",
+      "start": 112,
+      "end": 175,
+      "tags": ["coverage"]
+    },
+    {
+      "name": "Navigate the console with a keyboard",
+      "start": 175,
+      "end": 216,
+      "tags": ["console"]
+    },
+    {
+      "name": "AAA contrast ratio line in the Color Picker",
+      "start": 216,
+      "end": 264,
+      "tags": ["css", "elements", "accessibility"]
+    },
+    {
+      "name": "Save custom geolocation overrides",
+      "start": 264,
+      "end": 293,
+      "tags": ["device", "geolocation"]
+    },
+    {
+      "name": "Code folding",
+      "start": 293,
+      "end": 314,
+      "tags": ["sources"]
+    },
+    {
+      "name": "Frames tab is now Messages tab",
+      "start": 314,
+      "end": 336,
+      "tags": ["websocket", "network"]
+    },
+    {
+      "name": "Bonus tip! Filter network resources by properties like domain or file size",
+      "start": 336,
+      "end": 377,
+      "tags": ["network"]
+    }
+  ]
+}

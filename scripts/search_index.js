@@ -1,13 +1,18 @@
 #!/usr/bin/env node
-require('dotenv').config()
+let activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+if (activeEnv !== 'production') {
+  require('dotenv').config({
+    path: `.env.${activeEnv}`
+  })
+}
 const path = require('path')
 const fs = require('fs')
 const flatMap = require('lodash/flatMap')
 const slugify = require('slugify')
 
 const algoliasearch = require('algoliasearch')
-const client = algoliasearch(process.env.ALGOLIA_APPLICATION_ID, process.env.ALGOLIA_ADMIN_API_KEY)
-const index = client.initIndex(process.env.ALGOLIA_INDEX_NAME)
+const client = algoliasearch(process.env.GATSBY_ALGOLIA_APPLICATION_ID, process.env.ALGOLIA_ADMIN_API_KEY)
+const index = client.initIndex(process.env.GATSBY_ALGOLIA_INDEX_NAME)
 const data_path = path.resolve(process.cwd(), 'static/data')
 
 const convert_data_for_index = data => {

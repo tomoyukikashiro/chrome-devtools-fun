@@ -1,0 +1,62 @@
+{
+  "youtube_id": "eD4fiqjaxHw",
+  "version": 62,
+  "chapters": [
+    {
+      "name": "Two 2 ways new screenshot",
+      "start": 12,
+      "end":  45,
+      "tags": ["screenshot"]
+    },
+    {
+      "name": "Top-level await operators in the Console",
+      "start": 45,
+      "end":  58,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Negative filters in the Console",
+      "start": 58,
+      "end":  74,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "URL filters in the Console",
+      "start": 74,
+      "end":  88,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "New queryObjects API",
+      "start": 88,
+      "end":  148,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "CSS Grid highlighting",
+      "start": 148,
+      "end":  162,
+      "tags": ["css"]
+    },
+    {
+      "name": "HAR imports in the Network panel",
+      "start": 162,
+      "end":  181,
+      "tags": ["network"]
+    },
+    {
+      "name": "Block-level code coverage",
+      "start": 181,
+      "end":  200,
+      "tags": ["javascript", "coverage"]
+    },
+    {
+      "name": "More responsive cache debugging",
+      "start": 200,
+      "end":  239,
+      "tags": ["cache"]
+    }
+  ]
+}
+
+

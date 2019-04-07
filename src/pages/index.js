@@ -42,7 +42,11 @@ function IndexPage(props) {
       <CssBaseline />
       <Layout>
         {/* Hero unit */}
-        <Hero title="Chrome DevTools Fun" description={heroDescription} />
+        <Hero
+          title="Chrome DevTools Fun"
+          description={heroDescription}
+          handleModalOpen={handleModalOpen}
+          showSearch={true} />
         {/* End hero unit */}
         <div className={classNames(classes.layout, classes.cardGrid)}>
           {versions.map((video, i) => (
@@ -71,7 +75,7 @@ export const query = graphql`
       }
     }
     allVideo(
-      sort: {fields: [version], order: ASC}
+      sort: {fields: [version], order: DESC}
     ) {
       edges {
         node {

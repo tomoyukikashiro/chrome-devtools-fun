@@ -1,0 +1,41 @@
+{
+  "youtube_id": "br4JZ5qz_20",
+  "version": 68,
+  "chapters": [
+    {
+      "name": "Eager Evaluation",
+      "start": 15,
+      "end": 44,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Argument Hints",
+      "start": 44,
+      "end": 74,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Autocomplete After Invoking Functions",
+      "start": 74,
+      "end": 98,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Audits Panel Updates",
+      "start": 98,
+      "end": 187,
+      "tags": ["audits"]
+    },
+    {
+      "name": "New \"Optimize Site Speed\" Tutorial",
+      "start": 187,
+      "end": 198,
+      "tags": ["performance"]
+    } ,   {
+      "name": "Bonus Tip! Lesser-Known Console Methods",
+      "start": 198,
+      "end": 277,
+      "tags": ["console", "javascript"]
+    }
+  ]
+}

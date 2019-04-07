@@ -1,0 +1,38 @@
+{
+  "youtube_id": "Eyw_mwbABIQ",
+  "version": 63,
+  "chapters": [
+    {
+      "name": "Multi-client remote debugging",
+      "start": 18,
+      "end": 52,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "Workspaces 2.0",
+      "start": 52,
+      "end": 157,
+      "tags": ["worksplaces"]
+    },
+    {
+      "name": "Custom push notifications & background sync events",
+      "start": 157,
+      "end": 202,
+      "tags": ["application", "serviceworker"]
+    },
+    {
+      "name": "Four new audits",
+      "start": 202,
+      "end": 217,
+      "tags": ["audits"]
+    },
+    {
+      "name": "Bonus tip: event listener breakpoints",
+      "start": 217,
+      "end": 293,
+      "tags": ["javascript"]
+    }
+  ]
+}
+
+

@@ -1,0 +1,42 @@
+{
+  "youtube_id": "LJq8vg8ktdQ",
+  "version": 70,
+  "chapters": [
+    {
+      "name": "Live Expressions in the Console",
+      "start": 16,
+      "end": 83,
+      "tags": ["javascript", "console"]
+    },
+    {
+      "name": "Highlight DOM nodes during Eager Evaluation ",
+      "start": 83,
+      "end": 111,
+      "tags": ["javascript", "elements"]
+    },
+    {
+      "name": "Enable Network Throttling from the Command Menu",
+      "start": 111,
+      "end": 175,
+      "tags": ["network"]
+    },
+    {
+      "name": "Break on AudioContext Events",
+      "start": 175,
+      "end": 217,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "Debug Node.js apps with ndb",
+      "start": 217,
+      "end": 240,
+      "tags": ["node"]
+    },
+    {
+      "name": "Bonus Tip: Visualize performance measurements",
+      "start": 240,
+      "end": 323,
+      "tags": ["performance"]
+    }
+  ]
+}
