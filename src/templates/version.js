@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import classNames from 'classnames';
+import React, { useState } from "react"
+import classNames from "classnames"
 import { graphql } from "gatsby"
-import Divider from '@material-ui/core/Divider';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import Divider from "@material-ui/core/Divider"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Typography from "@material-ui/core/Typography"
+import { withStyles } from "@material-ui/core/styles"
 import Seo from "../components/seo"
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import VideoList from '../components/VideoList'
-import VideoModal from '../components/VideoModal'
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import VideoList from "../components/VideoList"
+import VideoModal from "../components/VideoModal"
 
 const styles = theme => ({
   layout: {
@@ -19,18 +19,23 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 3,
     paddingRight: theme.spacing.unit * 3,
   },
-});
+})
 
-const VersionPage = ({ classes, data: { allVideo: { edges } } }) => {
+const VersionPage = ({
+  classes,
+  data: {
+    allVideo: { edges },
+  },
+}) => {
   const video = edges[0].node
   const title = `Chrome DevTools Version ${video.version} updates`
-  const [modalOpen, handleModal] = useState(false);
-  const [youtube, activateYoutube] = useState(false);
+  const [modalOpen, handleModal] = useState(false)
+  const [youtube, activateYoutube] = useState(false)
   const handleModalOpen = (id, chapter) => {
-    activateYoutube({id, chapter});
-    handleModal(true);
+    activateYoutube({ id, chapter })
+    handleModal(true)
   }
-  const handleModalClose = () => handleModal(false);
+  const handleModalClose = () => handleModal(false)
   const mergeId = (videos, youtubeId) => videos.map(v => ({ ...v, youtubeId }))
 
   return (
@@ -46,19 +51,26 @@ const VersionPage = ({ classes, data: { allVideo: { edges } } }) => {
             Version {video.version}
           </Typography>
           <Divider />
-          <VideoList videos={mergeId(video.chapters, video.youtube_id)} handleModalOpen={handleModalOpen} />
+          <VideoList
+            videos={mergeId(video.chapters, video.youtube_id)}
+            handleModalOpen={handleModalOpen}
+          />
         </div>
       </Layout>
-      <VideoModal youtube={youtube} modalOpen={modalOpen} handleModalClose={handleModalClose} />
+      <VideoModal
+        youtube={youtube}
+        modalOpen={modalOpen}
+        handleModalClose={handleModalClose}
+      />
     </React.Fragment>
   )
 }
 
 export default withStyles(styles)(VersionPage)
 
-export const pageQuery = graphql`  
+export const pageQuery = graphql`
   query videos($version: Int) {
-    allVideo(filter: {version: {eq: $version}}, limit: 1) {
+    allVideo(filter: { version: { eq: $version } }, limit: 1) {
       edges {
         node {
           youtube_id

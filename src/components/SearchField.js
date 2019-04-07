@@ -1,24 +1,23 @@
-import React from 'react';
-import Select from 'react-select';
-import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
-import MenuItem from '@material-ui/core/MenuItem';
+import React from "react"
+import Select from "react-select"
+import { withStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import TextField from "@material-ui/core/TextField"
+import Paper from "@material-ui/core/Paper"
+import MenuItem from "@material-ui/core/MenuItem"
 // import { connectSearchBox } from 'react-instantsearch-dom';
-
 
 const styles = theme => ({
   input: {
-    display: 'flex',
+    display: "flex",
     padding: 0,
   },
   valueContainer: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: "flex",
+    flexWrap: "wrap",
     flex: 1,
-    alignItems: 'center',
-    overflow: 'hidden',
+    alignItems: "center",
+    overflow: "hidden",
   },
   noOptionsMessage: {
     padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
@@ -27,18 +26,18 @@ const styles = theme => ({
     fontSize: 16,
   },
   placeholder: {
-    position: 'absolute',
+    position: "absolute",
     left: 2,
     fontSize: 16,
   },
   paper: {
-    position: 'absolute',
+    position: "absolute",
     zIndex: 1,
     marginTop: theme.spacing.unit,
     left: 0,
     right: 0,
   },
-});
+})
 
 function NoOptionsMessage(props) {
   return (
@@ -49,11 +48,11 @@ function NoOptionsMessage(props) {
     >
       {props.children}
     </Typography>
-  );
+  )
 }
 
 function inputComponent({ inputRef, ...props }) {
-  return <div ref={inputRef} {...props} />;
+  return <div ref={inputRef} {...props} />
 }
 
 function Control(props) {
@@ -71,7 +70,7 @@ function Control(props) {
       }}
       {...props.selectProps.textFieldProps}
     />
-  );
+  )
 }
 
 function Option(props) {
@@ -87,7 +86,7 @@ function Option(props) {
     >
       {props.children}
     </MenuItem>
-  );
+  )
 }
 
 function Placeholder(props) {
@@ -99,27 +98,38 @@ function Placeholder(props) {
     >
       {props.children}
     </Typography>
-  );
+  )
 }
 
 function SingleValue(props) {
   return (
-    <Typography className={props.selectProps.classes.singleValue} {...props.innerProps}>
+    <Typography
+      className={props.selectProps.classes.singleValue}
+      {...props.innerProps}
+    >
       {props.children}
     </Typography>
-  );
+  )
 }
 
 function ValueContainer(props) {
-  return <div className={props.selectProps.classes.valueContainer}>{props.children}</div>;
+  return (
+    <div className={props.selectProps.classes.valueContainer}>
+      {props.children}
+    </div>
+  )
 }
 
 function Menu(props) {
   return (
-    <Paper square className={props.selectProps.classes.paper} {...props.innerProps}>
+    <Paper
+      square
+      className={props.selectProps.classes.paper}
+      {...props.innerProps}
+    >
       {props.children}
     </Paper>
-  );
+  )
 }
 
 const components = {
@@ -130,24 +140,24 @@ const components = {
   Placeholder,
   SingleValue,
   ValueContainer,
-};
+}
 
 class SearchField extends React.Component {
   render() {
-    const { classes, theme, hits, handleModalOpen } = this.props;
-    const options = hits.map(hit => ({value: hit, label: hit.name}))
+    const { classes, theme, hits, handleModalOpen } = this.props
+    const options = hits.map(hit => ({ value: hit, label: hit.name }))
     const handleChange = ({ value }) => {
       handleModalOpen(value.youtube_id, value)
-    };
+    }
     const selectStyles = {
       input: base => ({
         ...base,
         color: theme.palette.text.primary,
-        '& input': {
-          font: 'inherit',
+        "& input": {
+          font: "inherit",
         },
       }),
-    };
+    }
 
     return (
       <Select
@@ -159,8 +169,8 @@ class SearchField extends React.Component {
         placeholder="Search Chrome DevTools"
         isClearable
       />
-    );
+    )
   }
 }
 
-export default withStyles(styles, { withTheme: true })(SearchField);
+export default withStyles(styles, { withTheme: true })(SearchField)

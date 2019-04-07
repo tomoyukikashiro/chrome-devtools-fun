@@ -9,10 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import ogp from '../images/ogp.png'
-import favicon16 from '../images/icons/favicon-16x16.png'
-import favicon32 from '../images/icons/favicon-32x32.png'
-import appleIcon from '../images/icons/apple-touch-icon.png'
+import ogp from "../images/ogp.png"
+import favicon16 from "../images/icons/favicon-16x16.png"
+import favicon32 from "../images/icons/favicon-32x32.png"
+import appleIcon from "../images/icons/apple-touch-icon.png"
 
 function Seo({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
@@ -44,19 +44,19 @@ function Seo({ description, lang, meta, keywords, title }) {
         {
           rel: `apple-touch-icon`,
           sizes: `180x180`,
-          href: appleIcon
+          href: appleIcon,
         },
         {
           rel: `icon`,
           type: `image/png`,
           sizes: `32x32`,
-          href: favicon32
+          href: favicon32,
         },
         {
           rel: `icon`,
           type: `image/png`,
           sizes: `16x16`,
-          href: favicon16
+          href: favicon16,
         },
       ]}
       meta={[
@@ -99,7 +99,7 @@ function Seo({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:image`,
           content: `${site.siteMetadata.url}${ogp}`,
-        }
+        },
       ].concat(meta)}
     />
   )

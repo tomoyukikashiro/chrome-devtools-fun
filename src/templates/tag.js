@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import classNames from 'classnames';
-import Divider from '@material-ui/core/Divider';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import React, { useState } from "react"
+import classNames from "classnames"
+import Divider from "@material-ui/core/Divider"
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Typography from "@material-ui/core/Typography"
+import { withStyles } from "@material-ui/core/styles"
 import Seo from "../components/seo"
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import VideoList from '../components/VideoList'
-import VideoModal from '../components/VideoModal'
+import Layout from "../components/Layout"
+import Hero from "../components/Hero"
+import VideoList from "../components/VideoList"
+import VideoModal from "../components/VideoModal"
 
 const styles = theme => ({
   layout: {
@@ -18,17 +18,17 @@ const styles = theme => ({
     paddingLeft: theme.spacing.unit * 3,
     paddingRight: theme.spacing.unit * 3,
   },
-});
+})
 
 const VersionPage = ({ classes, pageContext: { videos, tag } }) => {
   const title = `Chrome DevTools '${tag}' updates`
-  const [modalOpen, handleModal] = useState(false);
-  const [youtube, activateYoutube] = useState(false);
+  const [modalOpen, handleModal] = useState(false)
+  const [youtube, activateYoutube] = useState(false)
   const handleModalOpen = (id, chapter) => {
-    activateYoutube({id, chapter});
-    handleModal(true);
+    activateYoutube({ id, chapter })
+    handleModal(true)
   }
-  const handleModalClose = () => handleModal(false);
+  const handleModalClose = () => handleModal(false)
 
   return (
     <React.Fragment>
@@ -46,7 +46,11 @@ const VersionPage = ({ classes, pageContext: { videos, tag } }) => {
           <VideoList videos={videos} handleModalOpen={handleModalOpen} />
         </div>
       </Layout>
-      <VideoModal youtube={youtube} modalOpen={modalOpen} handleModalClose={handleModalClose} />
+      <VideoModal
+        youtube={youtube}
+        modalOpen={modalOpen}
+        handleModalClose={handleModalClose}
+      />
     </React.Fragment>
   )
 }
