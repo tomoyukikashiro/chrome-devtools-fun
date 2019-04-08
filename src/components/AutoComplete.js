@@ -30,9 +30,8 @@ class Autocomplete extends Component {
   render() {
     const { hits, onSuggestionSelected } = this.props
     const { value } = this.state
-    const _onSuggestionSelected = e => {
-      const data = hits.find(h => h.name === e.currentTarget.value)
-      onSuggestionSelected(data.youtube_id, data)
+    const _onSuggestionSelected = (e, { suggestion }) => {
+      onSuggestionSelected(suggestion.youtube_id, suggestion)
     }
 
     const inputProps = {
