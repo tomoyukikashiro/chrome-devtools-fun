@@ -1,10 +1,13 @@
+const GA_TRACKING_ID = 'UA-137379002-1'
+
 module.exports = {
   siteMetadata: {
     url: `https://chromedevtools.fun`,
     title: `Chrome DevTools Fun 🎉`,
     description: `You can search Chrome DevTools updates and functions.`,
     account: `tomoyukikashiro`,
-    author: `Tomoyuki Kashiro`
+    author: `Tomoyuki Kashiro`,
+    gaTrackingId: GA_TRACKING_ID
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,9 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "UA-137379002-1",
-        ],
+        trackingIds: [ GA_TRACKING_ID ],
         // This object gets passed directly to the gtag config command
         // This config will be shared accross all trackingIds
         // gtagConfig: {
