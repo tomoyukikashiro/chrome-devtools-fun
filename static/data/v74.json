@@ -1,0 +1,42 @@
+{
+  "youtube_id": "I14fXc7sXdU",
+  "version": 74,
+  "chapters": [
+    {
+      "name": "Highlight all nodes affected by CSS property",
+      "start": 9,
+      "end": 42,
+      "tags": ["css", "element"]
+    },
+    {
+      "name": "Audits panel updates",
+      "start": 42,
+      "end": 114,
+      "tags": ["audits"]
+    },
+    {
+      "name": "Binary WebSocket message viewer",
+      "start": 114,
+      "end": 155,
+      "tags": ["network"]
+    },
+    {
+      "name": "Capture area screenshot",
+      "start": 155,
+      "end": 178,
+      "tags": ["screenshot"]
+    },
+    {
+      "name": "Service worker filters in the Network panel",
+      "start": 178,
+      "end": 197,
+      "tags": ["network", "serviceworker"]
+    },
+    {
+      "name": "Long tasks and First Paint in performance recordings",
+      "start": 197,
+      "end": 221,
+      "tags": ["performance"]
+    }
+  ]
+}
