@@ -80,6 +80,7 @@ export const pageQuery = graphql`
             name
             start
             end
+            tags
           }
         }
       }

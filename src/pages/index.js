@@ -96,6 +96,7 @@ export const query = graphql`
             name
             start
             end
+            tags
           }
         }
       }
