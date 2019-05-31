@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia"
 import Chip from '@material-ui/core/Chip'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import { withStyles } from "@material-ui/core"
+import { slug } from '../lib/video';
 
 const styles = theme => ({
   gridContainer: {
@@ -41,7 +42,7 @@ const VideoList = ({ classes, videos, handleModalOpen }) => (
     {videos.map((v, k) => (
       <Grid item key={k} sm={6} md={4} lg={3} className={classes.gridItem}>
         <Card className={classes.card}>
-          <CardActionArea onClick={() => handleModalOpen(v.youtubeId, v)}>
+          <CardActionArea onClick={() => handleModalOpen(v.youtubeId, v)} data-name={slug(v.name, {lower: true})}>
             <CardMedia
               className={classes.cardMedia}
               image={`https://img.youtube.com/vi/${

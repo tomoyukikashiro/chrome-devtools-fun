@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, {useEffect, useState} from 'react'
 import classNames from "classnames"
 import { graphql } from "gatsby"
 import Divider from "@material-ui/core/Divider"
@@ -11,6 +11,7 @@ import Hero from "../components/Hero"
 import VideoList from "../components/VideoList"
 import VideoModal from "../components/VideoModal"
 import withRoot from "../withRoot"
+import { getVideoByHash } from '../lib/video'
 
 const styles = theme => ({
   layout: {
@@ -38,6 +39,13 @@ const VersionPage = ({
   }
   const handleModalClose = () => handleModal(false)
   const mergeId = (videos, youtubeId) => videos.map(v => ({ ...v, youtubeId }))
+
+  useEffect(() => {
+    const hashSelectedChapeter = getVideoByHash(props.location.hash)
+    if (hashSelectedChapeter) {
+      hashSelectedChapeter.click();
+    }
+  }, []);
 
   return (
     <React.Fragment>
