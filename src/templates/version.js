@@ -25,6 +25,7 @@ const styles = theme => ({
 
 const VersionPage = ({
   classes,
+  location,
   data: {
     allVideo: { edges },
   },
@@ -41,7 +42,7 @@ const VersionPage = ({
   const mergeId = (videos, youtubeId) => videos.map(v => ({ ...v, youtubeId }))
 
   useEffect(() => {
-    const hashSelectedChapeter = getVideoByHash(props.location.hash)
+    const hashSelectedChapeter = getVideoByHash(location.hash)
     if (hashSelectedChapeter) {
       hashSelectedChapeter.click();
     }
