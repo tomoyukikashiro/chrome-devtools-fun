@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from "react"
 import classNames from "classnames"
 import { graphql } from "gatsby"
 import Divider from "@material-ui/core/Divider"
@@ -11,7 +11,7 @@ import Hero from "../components/Hero"
 import VideoList from "../components/VideoList"
 import VideoModal from "../components/VideoModal"
 import withRoot from "../withRoot"
-import { getVideoByHash } from '../lib/video'
+import { getVideoByHash } from "../lib/video"
 
 const styles = theme => ({
   layout: {
@@ -44,9 +44,9 @@ const VersionPage = ({
   useEffect(() => {
     const hashSelectedChapeter = getVideoByHash(location.hash)
     if (hashSelectedChapeter) {
-      hashSelectedChapeter.click();
+      hashSelectedChapeter.click()
     }
-  }, []);
+  }, [])
 
   return (
     <React.Fragment>

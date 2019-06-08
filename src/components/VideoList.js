@@ -5,10 +5,10 @@ import Card from "@material-ui/core/Card"
 import CardActions from "@material-ui/core/CardActions"
 import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
-import Chip from '@material-ui/core/Chip'
-import CardActionArea from '@material-ui/core/CardActionArea'
+import Chip from "@material-ui/core/Chip"
+import CardActionArea from "@material-ui/core/CardActionArea"
 import { withStyles } from "@material-ui/core"
-import { slug } from '../lib/video';
+import { slug } from "../lib/video"
 
 const styles = theme => ({
   gridContainer: {
@@ -33,8 +33,8 @@ const styles = theme => ({
     flexGrow: 1,
   },
   tag: {
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 })
 
 const VideoList = ({ classes, videos, handleModalOpen }) => (
@@ -42,12 +42,15 @@ const VideoList = ({ classes, videos, handleModalOpen }) => (
     {videos.map((v, k) => (
       <Grid item key={k} sm={6} md={4} lg={3} className={classes.gridItem}>
         <Card className={classes.card}>
-          <CardActionArea onClick={() => handleModalOpen(v.youtubeId, v)} data-name={slug(v.name, {lower: true})}>
+          <CardActionArea
+            onClick={() => handleModalOpen(v.youtubeId, v)}
+            data-name={slug(v.name, { lower: true })}
+          >
             <CardMedia
               className={classes.cardMedia}
               image={`https://img.youtube.com/vi/${
                 v.youtubeId
-                }/maxresdefault.jpg`} // eslint-disable-line max-len
+              }/maxresdefault.jpg`} // eslint-disable-line max-len
               title={v.name}
             />
             <CardContent className={classes.cardContent}>
@@ -57,7 +60,7 @@ const VideoList = ({ classes, videos, handleModalOpen }) => (
             </CardContent>
           </CardActionArea>
           <CardActions>
-            { v.tags.map(tag => (
+            {v.tags.map(tag => (
               <Chip
                 key={tag}
                 className={classes.tag}
@@ -66,8 +69,9 @@ const VideoList = ({ classes, videos, handleModalOpen }) => (
                 component="a"
                 clickable
                 href={`/tags/${tag}/`}
-                color="primary" />
-            )) }
+                color="primary"
+              />
+            ))}
           </CardActions>
         </Card>
       </Grid>
