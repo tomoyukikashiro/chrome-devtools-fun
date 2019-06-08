@@ -1,0 +1,54 @@
+{
+  "youtube_id": "6zKPwOMFsa4",
+  "version": 75,
+  "chapters": [
+    {
+      "name": "Meaningful preset values when autocompleting CSS functions",
+      "start": 10,
+      "end": 57,
+      "tags": ["css", "element"]
+    },
+    {
+      "name": "Clear site data from the Command Menu",
+      "start": 57,
+      "end": 97,
+      "tags": ["application"]
+    },
+    {
+      "name": "View all IndexedDB databases",
+      "start": 97,
+      "end": 141,
+      "tags": ["application"]
+    },
+    {
+      "name": "View a resource’s uncompressed size on hover",
+      "start": 141,
+      "end": 213,
+      "tags": ["network", "performance"]
+    },
+    {
+      "name": "Inline breakpoints in the breakpoint pane",
+      "start": 213,
+      "end": 264,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "Setting for disabling the detailed inspect tooltip",
+      "start": 264,
+      "end": 312,
+      "tags": ["css", "element"]
+    },
+    {
+      "name": "Setting for toggling tab indentation in the Sources panel editor",
+      "start": 312,
+      "end": 374,
+      "tags": ["utility"]
+    },
+    {
+      "name": "Dark theme bonus tip!",
+      "start": 374,
+      "end": 398,
+      "tags": ["utility"]
+    }
+  ]
+}
