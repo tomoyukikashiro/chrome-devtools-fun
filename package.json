@@ -18,7 +18,7 @@
     "gatsby-source-filesystem": "2.0.38",
     "gatsby-transformer-json": "2.1.11",
     "gatsby-transformer-sharp": "2.1.21",
-    "lodash": "4.17.11",
+    "lodash": "4.17.14",
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-autosuggest": "9.4.3",
