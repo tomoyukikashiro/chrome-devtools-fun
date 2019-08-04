@@ -1,0 +1,54 @@
+{
+  "youtube_id": "GLUB2yzk0ZQ",
+  "version": 76,
+  "chapters": [
+    {
+      "name": "Autocomplete with CSS values",
+      "start": 10,
+      "end": 43,
+      "tags": ["element", "css"]
+    },
+    {
+      "name": "New UI for network settings",
+      "start": 43,
+      "end": 75,
+      "tags": ["network"]
+    },
+    {
+      "name": "HAR import and export buttons",
+      "start": 75,
+      "end": 120,
+      "tags": ["network"]
+    },
+    {
+      "name": "Real-time total memory usage",
+      "start": 120,
+      "end": 141,
+      "tags": ["memory"]
+    },
+    {
+      "name": "Service worker port numbers",
+      "start": 141,
+      "end": 163,
+      "tags": ["application"]
+    },
+    {
+      "name": "Inspect background fetch and background sync events",
+      "start": 163,
+      "end": 187,
+      "tags": ["application"]
+    },
+    {
+      "name": "Experimental Puppeteer for Firefox project",
+      "start": 187,
+      "end": 240,
+      "tags": []
+    },
+    {
+      "name": "Screenshots + Accessibility Insights",
+      "start": 240,
+      "end":  272,
+      "tags": ["accessibility"]
+    }
+  ]
+}
