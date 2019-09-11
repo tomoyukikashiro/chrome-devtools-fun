@@ -1,0 +1,54 @@
+{
+  "youtube_id": "R8KzoMoKhnM",
+  "version": 77,
+  "chapters": [
+    {
+      "name": "Copy element’s style",
+      "start": 0,
+      "end": 10,
+      "tags": ["element", "css"]
+    },
+    {
+      "name": "Visualize layouts shifts ",
+      "start": 11,
+      "end": 35,
+      "tags": ["rendering", "performance"]
+    },
+    {
+      "name": "Lighthouse 5.1 in the Audits panel",
+      "start": 36,
+      "end": 75,
+      "tags": ["audit"]
+    },
+    {
+      "name": "OS theme syncing ",
+      "start": 76,
+      "end": 122,
+      "tags": ["utility"]
+    },
+    {
+      "name": "Keyboard shortcut for opening the Breakpoint Editor",
+      "start": 123,
+      "end": 156,
+      "tags": ["javascript"]
+    },
+    {
+      "name": "Prefetch cache in Network panel",
+      "start": 157,
+      "end": 189,
+      "tags": ["network", "performance"]
+    },
+    {
+      "name": "Private properties when viewing objects",
+      "start": 190,
+      "end": 224,
+      "tags": ["console", "javascript"]
+    },
+    {
+      "name": "Notifications and push messages in the Application panel",
+      "start": 225,
+      "end": 247,
+      "tags": ["application"]
+    }
+  ]
+}
