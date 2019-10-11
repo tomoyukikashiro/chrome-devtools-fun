@@ -8,7 +8,7 @@
     "@material-ui/icons": "3.0.2",
     "algoliasearch": "3.35.1",
     "dotenv": "8.1.0",
-    "gatsby": "2.15.35",
+    "gatsby": "2.15.36",
     "gatsby-image": "2.2.27",
     "gatsby-plugin-google-analytics": "2.1.21",
     "gatsby-plugin-google-gtag": "1.1.12",
