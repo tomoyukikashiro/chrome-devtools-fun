@@ -1,0 +1,36 @@
+{
+  "youtube_id": "VNkctDLYP6o",
+  "version": 78,
+  "chapters": [
+    {
+      "name": "Multi-client support in the Audits panel",
+      "start": 9,
+      "end": 107,
+      "tags": ["audit", "lighthouse"]
+    },
+    {
+      "name": "Payment Handler debugging",
+      "start": 109,
+      "end": 161,
+      "tags": ["payment"]
+    },
+    {
+      "name": "Lighthouse 5.2 in the Audits panel",
+      "start": 162,
+      "end": 189,
+      "tags": ["audit"]
+    },
+    {
+      "name": "Largest Contentful Paint in the Performance panel",
+      "start": 190,
+      "end": 229,
+      "tags": ["performance"]
+    },
+    {
+      "name": "File DevTools issues from the main menu",
+      "start": 230,
+      "end": 252,
+      "tags": ["utility"]
+    }
+  ]
+}
