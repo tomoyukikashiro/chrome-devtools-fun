@@ -1,0 +1,42 @@
+{
+  "youtube_id": "kobvF5cs6xY",
+  "version": 79,
+  "chapters": [
+    {
+      "name": "New features in for cookies",
+      "start": 9,
+      "end": 43,
+      "tags": ["cookie", "network"]
+    },
+    {
+      "name": "Prefers-color scheme & prefers-reduced-motion",
+      "start": 43,
+      "end": 73,
+      "tags": ["emulate"]
+    },
+    {
+      "name": "Code coverage updates",
+      "start": 73,
+      "end": 102,
+      "tags": ["coverage"]
+    },
+    {
+      "name": "Debug why a network resource was requested",
+      "start": 102,
+      "end": 129,
+      "tags": ["network"]
+    },
+    {
+      "name": "Console and Sources panels indentation preferences",
+      "start": 129,
+      "end": 170,
+      "tags": ["console"]
+    },
+    {
+      "name": "Supporting rename variable in console",
+      "start": 170,
+      "end": 187,
+      "tags": ["console"]
+    }
+  ]
+}
