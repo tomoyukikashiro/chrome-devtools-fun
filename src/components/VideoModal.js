@@ -72,11 +72,7 @@ const VideoModal = ({ classes, youtube, modalOpen, handleModalClose }) => {
             <iframe
               className={classes.modalItemInner}
               title={youtube.chapter.name}
-              src={`https://www.youtube-nocookie.com/embed/${
-                youtube.id
-              }?autoplay=1&showinfo=0&rel=0&start=${
-                youtube.chapter.start
-              }&end=${youtube.chapter.end}`}
+              src={`https://www.youtube-nocookie.com/embed/${youtube.id}?autoplay=1&showinfo=0&rel=0&start=${youtube.chapter.start}&end=${youtube.chapter.end}`}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
