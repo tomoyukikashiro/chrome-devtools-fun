@@ -1,0 +1,54 @@
+{
+  "youtube_id": "2EiPb1opH3g",
+  "version": 80,
+  "chapters": [
+    {
+      "name": "Support for let and class redeclarations",
+      "start": 9,
+      "end": 40,
+      "tags": ["console", "javascript"]
+    },
+    {
+      "name": "Improved WebAssembly debugging",
+      "start": 40,
+      "end": 54,
+      "tags": ["webassembly"]
+    },
+    {
+      "name": "Network Panel updates",
+      "start": 54,
+      "end": 64,
+      "tags": ["network"]
+    },
+    {
+      "name": "Request Initiator Chains in the Initiator tab",
+      "start": 64,
+      "end": 108,
+      "tags": ["network"]
+    },
+    {
+      "name": "URL and path columns in the Network panel",
+      "start": 108,
+      "end": 128,
+      "tags": ["network"]
+    },
+    {
+      "name": "Updated User-Agent strings",
+      "start": 128,
+      "end": 153,
+      "tags": ["network"]
+    },
+    {
+      "name": "New configuration UI",
+      "start": 153,
+      "end": 175,
+      "tags": ["audit"]
+    },
+    {
+      "name": "Per-function or per-block coverage modes",
+      "start": 175,
+      "end": 206,
+      "tags": ["coverage"]
+    }
+  ]
+}
