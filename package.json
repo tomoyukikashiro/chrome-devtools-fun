@@ -6,7 +6,7 @@
   "dependencies": {
     "@material-ui/core": "3.9.4",
     "@material-ui/icons": "3.0.2",
-    "algoliasearch": "3.35.1",
+    "algoliasearch": "4.1.0",
     "dotenv": "8.2.0",
     "gatsby": "2.18.21",
     "gatsby-image": "2.2.38",
