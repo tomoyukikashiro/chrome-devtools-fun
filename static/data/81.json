@@ -1,0 +1,48 @@
+{
+  "youtube_id": "HJNaNDspffM",
+  "version": 81,
+  "chapters": [
+    {
+      "name": "Moto G4 support in Device Mode",
+      "start": 10,
+      "end": 39,
+      "tags": ["network", "device"]
+    },
+    {
+      "name": "Blocked Cookies in the Cookies panel",
+      "start": 39,
+      "end": 62,
+      "tags": ["network", "cookie"]
+    },
+    {
+      "name": "Copy as Node.js fetch to include cookie data",
+      "start": 62,
+      "end": 92,
+      "tags": ["network"]
+    },
+    {
+      "name": "More accurate web app manifest icons",
+      "start": 92,
+      "end": 104,
+      "tags": ["application"]
+    },
+    {
+      "name": "Hover of CSS content properties to see unescaped values",
+      "start": 104,
+      "end": 121,
+      "tags": ["css"]
+    },
+    {
+      "name": "More detailed source map errors in the Console",
+      "start": 121,
+      "end": 129,
+      "tags": ["source"]
+    },
+    {
+      "name": "Setting for disabled scrolling past the end of a file",
+      "start": 129,
+      "end": 152,
+      "tags": ["source"]
+    }
+  ]
+}
