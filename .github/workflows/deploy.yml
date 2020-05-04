@@ -1,0 +1,50 @@
+name: Build and Deploy to Cloud Storage
+
+on:
+  push:
+    branches:
+    - master
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT }}
+  GCP_BUCKET: ${{ secrets.GCP_BUCKET }}
+
+jobs:
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT }}
+
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: Yarn Cache Folder
+      uses: actions/cache@v1
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    - name: Install deps
+      run: yarn
+
+    - name: Build
+      env:
+        GATSBY_ALGOLIA_APPLICATION_ID: ${{ secrets.GATSBY_ALGOLIA_APPLICATION_ID }}
+        GATSBY_ALGOLIA_SEARCH_API_KEY: ${{ secrets.GATSBY_ALGOLIA_SEARCH_API_KEY }}
+        GATSBY_ALGOLIA_INDEX_NAME: ${{ secrets.GATSBY_ALGOLIA_INDEX_NAME }}
+      run: yarn build
+
+    - name: Deploy
+      run: gsutil rsync -r public gs://$GCP_BUCKET
