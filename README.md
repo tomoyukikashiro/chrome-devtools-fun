@@ -2,7 +2,7 @@
 
 This site allow you to search and browse `Chrome DevTools updates` and `features`.
 
-https://chromedevtools.fun
+https://chromedevtools-fun.tomoyukikashiro.me
 
 ## Features
 
