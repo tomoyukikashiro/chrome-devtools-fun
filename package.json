@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "author": "Tomoyuki Kashiro <ksrtmyk@gmail.com>",
   "dependencies": {
-    "@material-ui/core": "3.9.4",
-    "@material-ui/icons": "3.0.2",
+    "@material-ui/core": "4.11.4",
+    "@material-ui/icons": "4.11.2",
     "algoliasearch": "4.1.0",
     "dotenv": "8.2.0",
     "gatsby": "2.19.43",
