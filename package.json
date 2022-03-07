@@ -28,7 +28,7 @@
     "react-instantsearch-dom": "6.3.0",
     "react-jss": "^8.0.0",
     "react-select": "3.0.8",
-    "slugify": "1.4.0"
+    "slugify": "1.6.5"
   },
   "devDependencies": {
     "prettier": "1.19.1"
