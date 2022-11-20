@@ -25,7 +25,7 @@
     "react-autosuggest": "9.4.3",
     "react-dom": "16.13.0",
     "react-helmet": "5.2.1",
-    "react-instantsearch-dom": "6.3.0",
+    "react-instantsearch-dom": "6.38.1",
     "react-jss": "^8.0.0",
     "react-select": "3.0.8",
     "slugify": "1.4.0"
