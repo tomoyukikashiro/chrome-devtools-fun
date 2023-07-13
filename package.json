@@ -27,7 +27,7 @@
     "react-helmet": "5.2.1",
     "react-instantsearch-dom": "6.3.0",
     "react-jss": "^8.0.0",
-    "react-select": "3.0.8",
+    "react-select": "5.7.4",
     "slugify": "1.4.0"
   },
   "devDependencies": {
